@@ -1,0 +1,6 @@
+{
+  "name": "PharmaCare Billing System",
+  "description": "A comprehensive pharmaceutical invoicing and inventory management software with expiry tracking and AI-powered medicine insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Invoicing", "Inventory Management", "Expiry Tracking"]
+}

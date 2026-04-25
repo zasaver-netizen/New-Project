@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #1a73e8;
+  --color-brand-secondary: #00897b;
+  --color-brand-accent: #d81b60;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-900;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-slate-200 shadow-sm rounded-xl;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-brand-primary text-white rounded-lg font-medium hover:bg-brand-primary/90 transition-all flex items-center gap-2;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-all flex items-center gap-2;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white;
+  }
+  
+  /* Thermal Style Override */
+  .thermal-mode {
+    width: 80mm !important;
+    font-size: 10px !important;
+    padding: 2mm !important;
+  }
+  .thermal-mode h1 { font-size: 14px !important; }
+  .thermal-mode .text-2xl { font-size: 16px !important; }
+}
+
+.print-only {
+  display: none;
+}
